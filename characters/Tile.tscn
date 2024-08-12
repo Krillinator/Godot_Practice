@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://tjloomj56xmm"]
+
+[sub_resource type="Gradient" id="Gradient_kg72a"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mq5nf"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ifnkb"]
+color_ramp = SubResource("Gradient_kg72a")
+noise = SubResource("FastNoiseLite_mq5nf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7o3a"]
+size = Vector2(32, 32)
+
+[node name="Tile" type="Node2D"]
+
+[node name="TileSprite" type="Sprite2D" parent="."]
+position = Vector2(-16, -240)
+scale = Vector2(0.0625, 0.0625)
+texture = SubResource("NoiseTexture2D_ifnkb")
+
+[node name="TileBody" type="StaticBody2D" parent="."]
+
+[node name="TileCollision" type="CollisionShape2D" parent="TileBody"]
+position = Vector2(-16, -240)
+shape = SubResource("RectangleShape2D_g7o3a")
+debug_color = Color(0, 0.6, 0.701961, 0)

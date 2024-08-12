@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtckjuug3djkp"]
+
+[ext_resource type="PackedScene" uid="uid://yqwh5h3fwlor" path="res://characters/Player.tscn" id="1_w248c"]
+[ext_resource type="PackedScene" uid="uid://tjloomj56xmm" path="res://characters/Tile.tscn" id="2_6k1x0"]
+
+[node name="Level_One" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_w248c")]
+position = Vector2(123, 85)
+
+[node name="Tile" parent="." instance=ExtResource("2_6k1x0")]
+position = Vector2(224, 416)
+
+[node name="Tile2" parent="." instance=ExtResource("2_6k1x0")]
+position = Vector2(192, 384)
+
+[node name="Tile2" parent="Tile2" instance=ExtResource("2_6k1x0")]
+position = Vector2(224, 416)
+
+[node name="Tile3" parent="." instance=ExtResource("2_6k1x0")]
+position = Vector2(288, 448)
+
+[node name="Tile2" parent="Tile3" instance=ExtResource("2_6k1x0")]
+position = Vector2(224, 416)

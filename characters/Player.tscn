@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://yqwh5h3fwlor"]
+
+[ext_resource type="Script" path="res://characters/scripts/PlayerEntity.cs" id="1_telsi"]
+[ext_resource type="Texture2D" uid="uid://swatye1i3yyy" path="res://sprites/icon.svg" id="2_mmlw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o24ku"]
+size = Vector2(64, 64)
+
+[node name="Player" type="Node2D"]
+position = Vector2(32, -32)
+
+[node name="PlayerEntity" type="CharacterBody2D" parent="."]
+script = ExtResource("1_telsi")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="PlayerEntity"]
+shape = SubResource("RectangleShape2D_o24ku")
+
+[node name="PlayerSprite" type="Sprite2D" parent="PlayerEntity"]
+position = Vector2(1.90735e-06, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mmlw7")
